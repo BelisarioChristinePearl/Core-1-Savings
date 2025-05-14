@@ -1,0 +1,25 @@
+{
+  "hash": "eaa9e9d2",
+  "configHash": "409326c6",
+  "lockfileHash": "97bef88a",
+  "browserHash": "a4528f5e",
+  "optimized": {
+    "axios": {
+      "src": "../../axios/index.js",
+      "file": "axios.js",
+      "fileHash": "fea0a2f5",
+      "needsInterop": false
+    },
+    "bootstrap": {
+      "src": "../../bootstrap/dist/js/bootstrap.esm.js",
+      "file": "bootstrap.js",
+      "fileHash": "6badc066",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-PZ5AY32C": {
+      "file": "chunk-PZ5AY32C.js"
+    }
+  }
+}
