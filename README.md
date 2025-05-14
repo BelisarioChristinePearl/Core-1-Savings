@@ -1,376 +1,246 @@
-<!-- <HEADER> // IGNORE IT -->
 <p align="center">
-  <img src="https://rawcdn.githack.com/popperjs/popper-core/8805a5d7599e14619c9e7ac19a3713285d8e5d7f/docs/src/images/popper-logo-outlined.svg" alt="Popper" height="300px"/>
-</p>
-
-<div align="center">
-  <h1>Tooltip & Popover Positioning Engine</h1>
-</div>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/@popperjs/core">
-    <img src="https://img.shields.io/npm/v/@popperjs/core?style=for-the-badge" alt="npm version" />
-  </a>
-  <a href="https://www.npmjs.com/package/@popperjs/core">
-    <img src="https://img.shields.io/endpoint?style=for-the-badge&url=https://runkit.io/fezvrasta/combined-npm-downloads/1.0.0?packages=popper.js,@popperjs/core" alt="npm downloads per month (popper.js + @popperjs/core)" />
-  </a>
-  <a href="https://rollingversions.com/popperjs/popper-core">
-    <img src="https://img.shields.io/badge/Rolling%20Versions-Enabled-brightgreen?style=for-the-badge" alt="Rolling Versions" />
+  <a href="https://getbootstrap.com/">
+    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165">
   </a>
 </p>
 
-<br />
-<!-- </HEADER> // NOW BEGINS THE README -->
-
-**Positioning tooltips and popovers is difficult. Popper is here to help!**
-
-Given an element, such as a button, and a tooltip element describing it, Popper
-will automatically put the tooltip in the right place near the button.
-
-It will position _any_ UI element that "pops out" from the flow of your document
-and floats near a target element. The most common example is a tooltip, but it
-also includes popovers, drop-downs, and more. All of these can be generically
-described as a "popper" element.
-
-## Demo
-
-[![Popper visualized](https://i.imgur.com/F7qWsmV.jpg)](https://popper.js.org)
-
-## Docs
-
-- [v2.x (latest)](https://popper.js.org/docs/v2/)
-- [v1.x](https://popper.js.org/docs/v1/)
-
-We've created a
-[Migration Guide](https://popper.js.org/docs/v2/migration-guide/) to help you
-migrate from Popper 1 to Popper 2.
-
-To contribute to the Popper website and documentation, please visit the
-[dedicated repository](https://github.com/popperjs/website).
-
-## Why not use pure CSS?
-
-- **Clipping and overflow issues**: Pure CSS poppers will not be prevented from
-  overflowing clipping boundaries, such as the viewport. It will get partially
-  cut off or overflows if it's near the edge since there is no dynamic
-  positioning logic. When using Popper, your popper will always be positioned in
-  the right place without needing manual adjustments.
-- **No flipping**: CSS poppers will not flip to a different placement to fit
-  better in view if necessary. While you can manually adjust for the main axis
-  overflow, this feature cannot be achieved via CSS alone. Popper automatically
-  flips the tooltip to make it fit in view as best as possible for the user.
-- **No virtual positioning**: CSS poppers cannot follow the mouse cursor or be
-  used as a context menu. Popper allows you to position your tooltip relative to
-  any coordinates you desire.
-- **Slower development cycle**: When pure CSS is used to position popper
-  elements, the lack of dynamic positioning means they must be carefully placed
-  to consider overflow on all screen sizes. In reusable component libraries,
-  this means a developer can't just add the component anywhere on the page,
-  because these issues need to be considered and adjusted for every time. With
-  Popper, you can place your elements anywhere and they will be positioned
-  correctly, without needing to consider different screen sizes, layouts, etc.
-  This massively speeds up development time because this work is automatically
-  offloaded to Popper.
-- **Lack of extensibility**: CSS poppers cannot be easily extended to fit any
-  arbitrary use case you may need to adjust for. Popper is built with
-  extensibility in mind.
-
-## Why Popper?
-
-With the CSS drawbacks out of the way, we now move on to Popper in the
-JavaScript space itself.
-
-Naive JavaScript tooltip implementations usually have the following problems:
-
-- **Scrolling containers**: They don't ensure the tooltip stays with the
-  reference element while scrolling when inside any number of scrolling
-  containers.
-- **DOM context**: They often require the tooltip move outside of its original
-  DOM context because they don't handle `offsetParent` contexts.
-- **Compatibility**: Popper handles an incredible number of edge cases regarding
-  different browsers and environments (mobile viewports, RTL, scrollbars enabled
-  or disabled, etc.). Popper is a popular and well-maintained library, so you
-  can be confident positioning will work for your users on any device.
-- **Configurability**: They often lack advanced configurability to suit any
-  possible use case.
-- **Size**: They are usually relatively large in size, or require an ancient
-  jQuery dependency.
-- **Performance**: They often have runtime performance issues and update the
-  tooltip position too slowly.
-
-**Popper solves all of these key problems in an elegant, performant manner.** It
-is a lightweight ~3 kB library that aims to provide a reliable and extensible
-positioning engine you can use to ensure all your popper elements are positioned
-in the right place.
-
-When you start writing your own popper implementation, you'll quickly run into
-all of the problems mentioned above. These widgets are incredibly common in our
-UIs; we've done the hard work figuring this out so you don't need to spend hours
-fixing and handling numerous edge cases that we already ran into while building
-the library!
-
-Popper is used in popular libraries like Bootstrap, Foundation, Material UI, and
-more. It's likely you've already used popper elements on the web positioned by
-Popper at some point in the past few years.
-
-Since we write UIs using powerful abstraction libraries such as React or Angular
-nowadays, you'll also be glad to know Popper can fully integrate with them and
-be a good citizen together with your other components. Check out `react-popper`
-for the official Popper wrapper for React.
-
-## Installation
-
-### 1. Package Manager
+<h3 align="center">Bootstrap</h3>
+
+<p align="center">
+  Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  <br>
+  <a href="https://getbootstrap.com/docs/5.3/"><strong>Explore Bootstrap docs »</strong></a>
+  <br>
+  <br>
+  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
+  ·
+  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
+  ·
+  <a href="https://themes.getbootstrap.com/">Themes</a>
+  ·
+  <a href="https://blog.getbootstrap.com/">Blog</a>
+</p>
+
+
+## Bootstrap 5
+
+Our default branch is for development of our Bootstrap 5 release. Head to the [`v4-dev` branch](https://github.com/twbs/bootstrap/tree/v4-dev) to view the readme, documentation, and source code for Bootstrap 4.
+
+
+## Table of contents
+
+- [Quick start](#quick-start)
+- [Status](#status)
+- [What's included](#whats-included)
+- [Bugs and feature requests](#bugs-and-feature-requests)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Community](#community)
+- [Versioning](#versioning)
+- [Creators](#creators)
+- [Thanks](#thanks)
+- [Copyright and license](#copyright-and-license)
+
+
+## Quick start
+
+Several quick start options are available:
+
+- [Download the latest release](https://github.com/twbs/bootstrap/archive/v5.3.3.zip)
+- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
+- Install with [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.3`
+- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.3`
+- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.3`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
+
+Read the [Getting started page](https://getbootstrap.com/docs/5.3/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+
+
+## Status
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/twbs/bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/twbs/bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Amain)
+[![npm version](https://img.shields.io/npm/v/bootstrap?logo=npm&logoColor=fff)](https://www.npmjs.com/package/bootstrap)
+[![Gem version](https://img.shields.io/gem/v/bootstrap?logo=rubygems&logoColor=fff)](https://rubygems.org/gems/bootstrap)
+[![Meteor Atmosphere](https://img.shields.io/badge/meteor-twbs%3Abootstrap-blue?logo=meteor&logoColor=fff)](https://atmospherejs.com/twbs/bootstrap)
+[![Packagist Prerelease](https://img.shields.io/packagist/vpre/twbs/bootstrap?logo=packagist&logoColor=fff)](https://packagist.org/packages/twbs/bootstrap)
+[![NuGet](https://img.shields.io/nuget/vpre/bootstrap?logo=nuget&logoColor=fff)](https://www.nuget.org/packages/bootstrap/absoluteLatest)
+[![Coverage Status](https://img.shields.io/coveralls/github/twbs/bootstrap/main?logo=coveralls&logoColor=fff)](https://coveralls.io/github/twbs/bootstrap?branch=main)
+[![CSS gzip size](https://img.badgesize.io/twbs/bootstrap/main/dist/css/bootstrap.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.min.css)
+[![CSS Brotli size](https://img.badgesize.io/twbs/bootstrap/main/dist/css/bootstrap.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.min.css)
+[![JS gzip size](https://img.badgesize.io/twbs/bootstrap/main/dist/js/bootstrap.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/twbs/bootstrap/blob/main/dist/js/bootstrap.min.js)
+[![JS Brotli size](https://img.badgesize.io/twbs/bootstrap/main/dist/js/bootstrap.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/twbs/bootstrap/blob/main/dist/js/bootstrap.min.js)
+[![Backers on Open Collective](https://img.shields.io/opencollective/backers/bootstrap?logo=opencollective&logoColor=fff)](#backers)
+[![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/bootstrap?logo=opencollective&logoColor=fff)](#sponsors)
+
 
-```bash
-# With npm
-npm i @popperjs/core
+## What's included
 
-# With Yarn
-yarn add @popperjs/core
-```
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
 
-### 2. CDN
+<details>
+  <summary>Download contents</summary>
+
+  ```text
+  bootstrap/
+  ├── css/
+  │   ├── bootstrap-grid.css
+  │   ├── bootstrap-grid.css.map
+  │   ├── bootstrap-grid.min.css
+  │   ├── bootstrap-grid.min.css.map
+  │   ├── bootstrap-grid.rtl.css
+  │   ├── bootstrap-grid.rtl.css.map
+  │   ├── bootstrap-grid.rtl.min.css
+  │   ├── bootstrap-grid.rtl.min.css.map
+  │   ├── bootstrap-reboot.css
+  │   ├── bootstrap-reboot.css.map
+  │   ├── bootstrap-reboot.min.css
+  │   ├── bootstrap-reboot.min.css.map
+  │   ├── bootstrap-reboot.rtl.css
+  │   ├── bootstrap-reboot.rtl.css.map
+  │   ├── bootstrap-reboot.rtl.min.css
+  │   ├── bootstrap-reboot.rtl.min.css.map
+  │   ├── bootstrap-utilities.css
+  │   ├── bootstrap-utilities.css.map
+  │   ├── bootstrap-utilities.min.css
+  │   ├── bootstrap-utilities.min.css.map
+  │   ├── bootstrap-utilities.rtl.css
+  │   ├── bootstrap-utilities.rtl.css.map
+  │   ├── bootstrap-utilities.rtl.min.css
+  │   ├── bootstrap-utilities.rtl.min.css.map
+  │   ├── bootstrap.css
+  │   ├── bootstrap.css.map
+  │   ├── bootstrap.min.css
+  │   ├── bootstrap.min.css.map
+  │   ├── bootstrap.rtl.css
+  │   ├── bootstrap.rtl.css.map
+  │   ├── bootstrap.rtl.min.css
+  │   └── bootstrap.rtl.min.css.map
+  └── js/
+      ├── bootstrap.bundle.js
+      ├── bootstrap.bundle.js.map
+      ├── bootstrap.bundle.min.js
+      ├── bootstrap.bundle.min.js.map
+      ├── bootstrap.esm.js
+      ├── bootstrap.esm.js.map
+      ├── bootstrap.esm.min.js
+      ├── bootstrap.esm.min.js.map
+      ├── bootstrap.js
+      ├── bootstrap.js.map
+      ├── bootstrap.min.js
+      └── bootstrap.min.js.map
+  ```
+</details>
 
-```html
-<!-- Development version -->
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/).
 
-<!-- Production version -->
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-```
 
-### 3. Direct Download?
+## Bugs and feature requests
 
-Managing dependencies by "directly downloading" them and placing them into your
-source code is not recommended for a variety of reasons, including missing out
-on feat/fix updates easily. Please use a versioning management system like a CDN
-or npm/Yarn.
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new/choose).
 
-## Usage
 
-The most straightforward way to get started is to import Popper from the `unpkg`
-CDN, which includes all of its features. You can call the `Popper.createPopper`
-constructor to create new popper instances.
+## Documentation
 
-Here is a complete example:
+Bootstrap's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://getbootstrap.com/>. The docs may also be run locally.
 
-```html
-<!DOCTYPE html>
-<title>Popper example</title>
+Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/).
 
-<style>
-  #tooltip {
-    background-color: #333;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 13px;
-  }
-</style>
+### Running documentation locally
 
-<button id="button" aria-describedby="tooltip">I'm a button</button>
-<div id="tooltip" role="tooltip">I'm a tooltip</div>
+1. Run `npm install` to install the Node.js dependencies, including Hugo (the site builder).
+2. Run `npm run test` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
+3. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
+4. Open `http://localhost:9001/` in your browser, and voilà.
 
-<script src="https://unpkg.com/@popperjs/core@^2.0.0"></script>
-<script>
-  const button = document.querySelector('#button');
-  const tooltip = document.querySelector('#tooltip');
+Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
 
-  // Pass the button, the tooltip, and some options, and Popper will do the
-  // magic positioning for you:
-  Popper.createPopper(button, tooltip, {
-    placement: 'right',
-  });
-</script>
-```
+### Documentation for previous releases
 
-Visit the [tutorial](https://popper.js.org/docs/v2/tutorial/) for an example of
-how to build your own tooltip from scratch using Popper.
+You can find all our previous releases docs on <https://getbootstrap.com/docs/versions/>.
 
-### Module bundlers
+[Previous releases](https://github.com/twbs/bootstrap/releases) and their documentation are also available for download.
 
-You can import the `createPopper` constructor from the fully-featured file:
 
-```js
-import { createPopper } from '@popperjs/core';
+## Contributing
 
-const button = document.querySelector('#button');
-const tooltip = document.querySelector('#tooltip');
+Please read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
-// Pass the button, the tooltip, and some options, and Popper will do the
-// magic positioning for you:
-createPopper(button, tooltip, {
-  placement: 'right',
-});
-```
+Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/twbs/bootstrap/tree/main/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 
-All the modifiers listed in the docs menu will be enabled and "just work", so
-you don't need to think about setting Popper up. The size of Popper including
-all of its features is about 5 kB minzipped, but it may grow a bit in the
-future.
+Editor preferences are available in the [editor config](https://github.com/twbs/bootstrap/blob/main/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
-#### Popper Lite (tree-shaking)
 
-If bundle size is important, you'll want to take advantage of tree-shaking. The
-library is built in a modular way to allow to import only the parts you really
-need.
+## Community
 
-```js
-import { createPopperLite as createPopper } from '@popperjs/core';
-```
+Get updates on Bootstrap's development and chat with the project maintainers and community members.
 
-The Lite version includes the most necessary modifiers that will compute the
-offsets of the popper, compute and add the positioning styles, and add event
-listeners. This is close in bundle size to pure CSS tooltip libraries, and
-behaves somewhat similarly.
+- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
+- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com/).
+- Ask questions and explore [our GitHub Discussions](https://github.com/twbs/bootstrap/discussions).
+- Discuss, ask questions, and more on [the community Discord](https://discord.gg/bZUvakRU3M) or [Bootstrap subreddit](https://reddit.com/r/bootstrap).
+- Chat with fellow Bootstrappers in IRC. On the `irc.libera.chat` server, in the `#bootstrap` channel.
+- Implementation help may be found at Stack Overflow (tagged [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
+- Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
 
-However, this does not include the features that makes Popper truly useful.
 
-The two most useful modifiers not included in Lite are `preventOverflow` and
-`flip`:
+## Versioning
 
-```js
-import {
-  createPopperLite as createPopper,
-  preventOverflow,
-  flip,
-} from '@popperjs/core';
+For transparency into our release cycle and in striving to maintain backward compatibility, Bootstrap is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
 
-const button = document.querySelector('#button');
-const tooltip = document.querySelector('#tooltip');
+See [the Releases section of our GitHub project](https://github.com/twbs/bootstrap/releases) for changelogs for each release version of Bootstrap. Release announcement posts on [the official Bootstrap blog](https://blog.getbootstrap.com/) contain summaries of the most noteworthy changes made in each release.
 
-createPopper(button, tooltip, {
-  modifiers: [preventOverflow, flip],
-});
-```
 
-As you make more poppers, you may be finding yourself needing other modifiers
-provided by the library.
+## Creators
 
-See [tree-shaking](https://popper.js.org/docs/v2/performance/#tree-shaking) for more
-information.
+**Mark Otto**
 
-## Distribution targets
+- <https://twitter.com/mdo>
+- <https://github.com/mdo>
 
-Popper is distributed in 3 different versions, in 3 different file formats.
+**Jacob Thornton**
 
-The 3 file formats are:
+- <https://twitter.com/fat>
+- <https://github.com/fat>
 
-- `esm` (works with `import` syntax — **recommended**)
-- `umd` (works with `<script>` tags or RequireJS)
-- `cjs` (works with `require()` syntax)
 
-There are two different `esm` builds, one for bundler consumers (e.g. webpack,
-Rollup, etc..), which is located under `/lib`, and one for browsers with native
-support for ES Modules, under `/dist/esm`. The only difference within the two,
-is that the browser-compatible version doesn't make use of
-`process.env.NODE_ENV` to run development checks.
+## Thanks
 
-The 3 versions are:
+<a href="https://www.browserstack.com/">
+  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack" width="192" height="42">
+</a>
 
-- `popper`: includes all the modifiers (features) in one file (**default**);
-- `popper-lite`: includes only the minimum amount of modifiers to provide the
-  basic functionality;
-- `popper-base`: doesn't include any modifier, you must import them separately;
+Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
 
-Below you can find the size of each version, minified and compressed with the
-[Brotli compression algorithm](https://medium.com/groww-engineering/enable-brotli-compression-in-webpack-with-fallback-to-gzip-397a57cf9fc6):
+<a href="https://www.netlify.com/">
+  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40">
+</a>
 
-<!-- Don't change the labels to use hyphens, it breaks, even when encoded -->
+Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
 
-![](https://badge-size.now.sh/https://unpkg.com/@popperjs/core/dist/umd/popper.min.js?compression=brotli&label=popper)
-![](https://badge-size.now.sh/https://unpkg.com/@popperjs/core/dist/umd/popper-lite.min.js?compression=brotli&label=popper%20lite)
-![](https://badge-size.now.sh/https://unpkg.com/@popperjs/core/dist/umd/popper-base.min.js?compression=brotli&label=popper%20base)
 
-## Hacking the library
+## Sponsors
 
-If you want to play with the library, implement new features, fix a bug you
-found, or simply experiment with it, this section is for you!
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/bootstrap#sponsor)]
 
-First of all, make sure to have
-[Yarn installed](https://yarnpkg.com/lang/en/docs/install).
+[![OC sponsor 0](https://opencollective.com/bootstrap/sponsor/0/avatar.svg)](https://opencollective.com/bootstrap/sponsor/0/website)
+[![OC sponsor 1](https://opencollective.com/bootstrap/sponsor/1/avatar.svg)](https://opencollective.com/bootstrap/sponsor/1/website)
+[![OC sponsor 2](https://opencollective.com/bootstrap/sponsor/2/avatar.svg)](https://opencollective.com/bootstrap/sponsor/2/website)
+[![OC sponsor 3](https://opencollective.com/bootstrap/sponsor/3/avatar.svg)](https://opencollective.com/bootstrap/sponsor/3/website)
+[![OC sponsor 4](https://opencollective.com/bootstrap/sponsor/4/avatar.svg)](https://opencollective.com/bootstrap/sponsor/4/website)
+[![OC sponsor 5](https://opencollective.com/bootstrap/sponsor/5/avatar.svg)](https://opencollective.com/bootstrap/sponsor/5/website)
+[![OC sponsor 6](https://opencollective.com/bootstrap/sponsor/6/avatar.svg)](https://opencollective.com/bootstrap/sponsor/6/website)
+[![OC sponsor 7](https://opencollective.com/bootstrap/sponsor/7/avatar.svg)](https://opencollective.com/bootstrap/sponsor/7/website)
+[![OC sponsor 8](https://opencollective.com/bootstrap/sponsor/8/avatar.svg)](https://opencollective.com/bootstrap/sponsor/8/website)
+[![OC sponsor 9](https://opencollective.com/bootstrap/sponsor/9/avatar.svg)](https://opencollective.com/bootstrap/sponsor/9/website)
 
-Install the development dependencies:
 
-```bash
-yarn install
-```
+## Backers
 
-And run the development environment:
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/bootstrap#backer)]
 
-```bash
-yarn dev
-```
+[![Backers](https://opencollective.com/bootstrap/backers.svg?width=890)](https://opencollective.com/bootstrap#backers)
 
-Then, simply open one the development server web page:
 
-```bash
-# macOS and Linux
-open localhost:5000
+## Copyright and license
 
-# Windows
-start localhost:5000
-```
-
-From there, you can open any of the examples (`.html` files) to fiddle with
-them.
-
-Now any change you will made to the source code, will be automatically compiled,
-you just need to refresh the page.
-
-If the page is not working properly, try to go in _"Developer Tools >
-Application > Clear storage"_ and click on "_Clear site data_".  
-To run the examples you need a browser with
-[JavaScript modules via script tag support](https://caniuse.com/#feat=es6-module).
-
-## Test Suite
-
-Popper is currently tested with unit tests, and functional tests. Both of them
-are run by Jest.
-
-### Unit Tests
-
-The unit tests use JSDOM to provide a primitive document object API, they are
-used to ensure the utility functions behave as expected in isolation.
-
-### Functional Tests
-
-The functional tests run with Puppeteer, to take advantage of a complete browser
-environment. They are currently running on Chromium, and Firefox.
-
-You can run them with `yarn test:functional`. Set the `PUPPETEER_BROWSER`
-environment variable to `firefox` to run them on the Mozilla browser.
-
-The assertions are written in form of image snapshots, so that it's easy to
-assert for the correct Popper behavior without having to write a lot of offsets
-comparisons manually.
-
-You can mark a `*.test.js` file to run in the Puppeteer environment by
-prepending a `@jest-environment puppeteer` JSDoc comment to the interested file.
-
-Here's an example of a basic functional test:
-
-```js
-/**
- * @jest-environment puppeteer
- * @flow
- */
-import { screenshot } from '../utils/puppeteer.js';
-
-it('should position the popper on the right', async () => {
-  const page = await browser.newPage();
-  await page.goto(`${TEST_URL}/basic.html`);
-
-  expect(await screenshot(page)).toMatchImageSnapshot();
-});
-```
-
-You can find the complete
-[`jest-puppeteer` documentation here](https://github.com/smooth-code/jest-puppeteer#api),
-and the
-[`jest-image-snapshot` documentation here](https://github.com/americanexpress/jest-image-snapshot#%EF%B8%8F-api).
-
-## License
-
-MIT
+Code and documentation copyright 2011–2024 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).

@@ -1,9 +1,43 @@
-export { default as applyStyles } from "./applyStyles.js";
-export { default as arrow } from "./arrow.js";
-export { default as computeStyles } from "./computeStyles.js";
-export { default as eventListeners } from "./eventListeners.js";
-export { default as flip } from "./flip.js";
-export { default as hide } from "./hide.js";
-export { default as offset } from "./offset.js";
-export { default as popperOffsets } from "./popperOffsets.js";
-export { default as preventOverflow } from "./preventOverflow.js";
+import axios from './lib/axios.js';
+
+// This module is intended to unwrap Axios default export as named.
+// Keep top-level export same with static properties
+// so that it can keep same with es module or cjs
+const {
+  Axios,
+  AxiosError,
+  CanceledError,
+  isCancel,
+  CancelToken,
+  VERSION,
+  all,
+  Cancel,
+  isAxiosError,
+  spread,
+  toFormData,
+  AxiosHeaders,
+  HttpStatusCode,
+  formToJSON,
+  getAdapter,
+  mergeConfig
+} = axios;
+
+export {
+  axios as default,
+  Axios,
+  AxiosError,
+  CanceledError,
+  isCancel,
+  CancelToken,
+  VERSION,
+  all,
+  Cancel,
+  isAxiosError,
+  spread,
+  toFormData,
+  AxiosHeaders,
+  HttpStatusCode,
+  formToJSON,
+  getAdapter,
+  mergeConfig
+}
